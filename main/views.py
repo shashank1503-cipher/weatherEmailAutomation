@@ -38,9 +38,8 @@ def sendEmail(request):
     message = 'Temperature in {city} is {temp:.2f} C {emoji} at {time}'.format(city=city,temp=temperatureInC,emoji=emoji,time=fTime)
     email_from = settings.EMAIL_HOST_USER
     recipient_list = ['shashank.srivastava25sks@gmail.com', ]
-    # send_mail( subject, message, email_from, recipient_list )
-    # return response.HttpResponse("<p>Email Sent</p><a href='/'>Go Back</a> ")
-    return response.JsonResponse({"emailId" : email_from})
+    send_mail( subject, message, email_from, recipient_list )
+    return response.HttpResponse("<p>Email Sent</p><a href='/'>Go Back</a> ")
 def getInput(request):
     return render(request,'index.html')
 
