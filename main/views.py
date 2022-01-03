@@ -5,6 +5,7 @@ from django.conf import settings
 from django.core.mail import send_mail
 import requests
 import datetime
+from .models import ClientDetails
 # Create your views here.
 def getEmoji(temperature):
     emoji = ""
@@ -25,6 +26,7 @@ def sendEmail(request):
     apiKey = settings.API_KEY
     city = request.GET['city']
     name = request.GET['name']
+    email = request.GET['email']
     apiUrl = 'http://api.openweathermap.org/data/2.5/weather?q={cityName}&appid={APIkey}'.format(cityName = city,APIkey = apiKey)
     resp = requests.get(apiUrl)
     weather = resp.json()
@@ -37,8 +39,10 @@ def sendEmail(request):
     subject = 'Hi {name}, interested in our services.'.format(name=name)
     message = 'Temperature in {city} is {temp:.2f} C {emoji} at {time}'.format(city=city,temp=temperatureInC,emoji=emoji,time=fTime)
     email_from = settings.EMAIL_HOST_USER
-    recipient_list = ['shashank.srivastava25sks@gmail.com', ]
+    recipient_list = [email, ]
     send_mail( subject, message, email_from, recipient_list )
+    c = ClientDetails(username = name,email=email,temperature=temperatureInC,timeRequested = cTime)
+    c.save()
     return response.HttpResponse("<p>Email Sent</p><a href='/'>Go Back</a> ")
 def getInput(request):
     return render(request,'index.html')
