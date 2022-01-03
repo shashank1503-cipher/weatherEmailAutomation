@@ -29,8 +29,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-# Activate Django-Heroku.
-django_heroku.settings(locals())
+
 
 # Application definition
 
@@ -130,3 +129,5 @@ EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 API_KEY = os.environ.get('WEATHER_API_KEY')
 
+# Activate Django-Heroku.
+django_heroku.settings(locals())
