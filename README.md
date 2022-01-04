@@ -67,7 +67,7 @@ Error Handling
 The project uses OpenweatherMap API to get the weather data for a specific city and sends the temperature to the given mail using Django's inbuilt Email Service. Noticeable features about the codebase:
 
 * Robust Code
-* Use of Environment Variables to store secret_keys for added security advantage
+* Use of Environment Variables to store secret keys for added security advantage
 
 ## Usage example
 
