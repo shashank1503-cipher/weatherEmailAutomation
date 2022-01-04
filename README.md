@@ -82,7 +82,7 @@ Application can be used by visiting the following link
 
 ## How to Contribute
 
-This Repository is currently not accepting any contributions.
+This repository is currently not accepting any contributions.
 
 ## Authors
 
