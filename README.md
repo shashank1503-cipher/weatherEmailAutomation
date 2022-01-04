@@ -2,7 +2,7 @@
 
 > Assignment Submission for Xtreme Technologies.
 
-![](https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png)
+![image](https://user-images.githubusercontent.com/54381338/148017526-dfc2c797-d7f5-4274-8ed0-b00fb9b2c0f9.png)
 
 ## Requirements  (Prerequisites)
 
