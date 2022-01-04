@@ -1,6 +1,6 @@
 from django.db import models
 
-# Create your models here.
+# Client Details Table.
 class ClientDetails(models.Model):
     username = models.CharField(max_length=255)
     email = models.EmailField()
