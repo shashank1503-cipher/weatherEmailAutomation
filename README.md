@@ -7,7 +7,6 @@
 ## Requirements  (Prerequisites)
 
 Tools and packages required to successfully install this project.
-For example:
 
 * Python 3.6.5 and up [Install](https://www.python.org/downloads/)
 
